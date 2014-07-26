@@ -1,0 +1,10 @@
+<%= form_for :question, url: questions_path do |form| %>
+    <p>
+      <%= form.label :body, 'Enter your question' %><br>
+      <%= form.text_field :body %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+<% end %>
