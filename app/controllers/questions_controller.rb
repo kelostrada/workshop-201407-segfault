@@ -2,7 +2,10 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   def index
-    @questions = Question.last(3)
+    @questions = Question.all.page(params[:page]).per(10)
+  end
+
+  def last_questions
   end
 
   def new
