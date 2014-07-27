@@ -11,6 +11,11 @@
 <h1>Segfault</h1>
 <hr />
 
+<% if user_signed_in? %>
+  <%= current_user.email %> |
+  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<% end %>
+
 <div class="notice"><%= flash[:notice] %></div>
 <div class="alert"><%= flash[:alert] %></div>
 

@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  post 'sessions' => 'sessions#create'
-
-  get 'home/index'
-
+  devise_for :users
   resources :questions
 
   root 'home#index'
