@@ -5,9 +5,6 @@ class QuestionsController < ApplicationController
     @questions = Question.all.page(params[:page]).per(10)
   end
 
-  def last_questions
-  end
-
   def new
     @question = Question.new
   end
