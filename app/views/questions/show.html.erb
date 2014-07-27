@@ -1,0 +1,13 @@
+<h1>Question #<%= @question.id %></h1>
+
+<p>
+  <strong>Body:</strong>
+  <%= @question.body %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @question.author %>
+</p>
+
+<p><%= link_to 'Back', questions_path %> | <%= link_to 'Edit', edit_question_path(@question) %></p>

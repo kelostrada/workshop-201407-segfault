@@ -1,0 +1,13 @@
+<h1>All questions</h1>
+
+<p><%= link_to 'Add Question', new_question_path %></p>
+
+<table>
+  <tr>
+    <th>Body</th>
+    <th>Author</th>
+    <th colspan="3"></th>
+  </tr>
+
+  <%= render @questions %>
+</table>
