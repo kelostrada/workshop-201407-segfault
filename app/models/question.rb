@@ -1,6 +1,8 @@
 class Question < ActiveRecord::Base
   AUTHOR_FORMAT = /\A[A-Z][A-Za-z]+\z/
 
+  belongs_to :user
+
   validates :body,
             presence: true,
             length:   {minimum: 3}
