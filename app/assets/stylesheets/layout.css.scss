@@ -1,9 +1,11 @@
-.notice {
-  background: #151;
-  color: #fff;
-}
+@import "foundation/components/global";
 
-.alert {
-  background: #733;
-  color: #fff;
+.field_with_errors {
+  input {
+    border-color: $alert-color;
+  }
+
+  label {
+    color: $alert-color;
+  }
 }

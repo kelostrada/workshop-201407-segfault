@@ -1,0 +1,13 @@
+h1.clearfix
+  | All questions
+  = link_to 'Add Question', new_question_path, class: 'button right'
+
+= paginate @questions
+
+table
+  tr
+    th
+    th Body
+    th Author
+    th colspan=3
+  = render @questions

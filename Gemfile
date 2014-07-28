@@ -39,7 +39,9 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'devise'
+gem 'foundation-rails'
 gem 'kaminari'
+gem 'slim-rails'
 
 group :test do
   gem 'rspec-rails', '~> 3.0.0'

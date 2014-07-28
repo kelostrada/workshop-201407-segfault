@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title Segfault
+    meta content='width=device-width, initial-scale=1.0' name='viewport'
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'vendor/modernizr'
+    = csrf_meta_tags
+  body
+    .row
+      .large-12.columns
+        h1 Segfault
+        h4 Where Question.joins(:answers)
+        hr
+    .row
+      .large-12.columns
+        - if user_signed_in?
+          =' current_user.email
+          ' |
+          = link_to 'Sign out', destroy_user_session_path, method: :delete
+        - else
+          = link_to 'Sign in', new_user_session_path
+        hr
+    .row
+      .large-12.columns
+        - if flash.notice
+          .alert-box.success = flash[:notice]
+        - if flash.alert
+          .alert-box.alert = flash[:alert]
+        = yield

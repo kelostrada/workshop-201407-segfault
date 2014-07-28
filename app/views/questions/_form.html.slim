@@ -1,0 +1,17 @@
+= form_for @question do |form|
+  - if @question.errors.any?
+    .alert-box.alert
+      p : strong Please fix #{pluralize(@question.errors.count, 'error')}:
+      ul
+        - @question.errors.full_messages.each do |message|
+          li = message
+
+  .row
+    .small-2.columns = form.label :body, class: 'right inline'
+    .small-10.columns = form.text_field :body
+  .row
+    .small-2.columns = form.label :author, class: 'right inline'
+    .small-10.columns = form.text_field :author
+  .row
+    .small-2.columns
+    .small-10.columns = form.submit class: 'button'
