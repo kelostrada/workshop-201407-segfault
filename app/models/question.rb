@@ -1,5 +1,4 @@
 class Question < ActiveRecord::Base
-  AUTHOR_FORMAT = /\A[A-Z][A-Za-z]+\z/
 
   belongs_to :user
 
@@ -7,12 +6,8 @@ class Question < ActiveRecord::Base
             presence: true,
             length:   {minimum: 3}
 
-  validates :author,
-            presence: true,
-            format:   {with: AUTHOR_FORMAT}
-
-  def author_initials
-    author.split.map(&:first).join.upcase
+  def author
+    user.name
   end
 
 end

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1075903894">
+    <data-source source="LOCAL" name="Rails workshop-201407-segfault: development" uuid="9a9be57d-e9e3-4523-8201-9239a14ec4e6">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:D:\SkyDrive\Documents\RubyMineProjects\workshop-201407-segfault\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Sign-in process', type: :feature do
 
   context 'given user with email and password already exists' do
-    before { User.create(email: 'user@example.com', password: 'secretsecret') }
+    before { User.create(email: 'user@example.com', name: 'User', password: 'secretsecret') }
 
     it 'signs me in' do
       visit '/users/sign_in'

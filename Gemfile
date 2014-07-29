@@ -48,3 +48,6 @@ group :test do
   gem 'shoulda-matchers', require: false
   gem 'capybara', github: 'jnicklas/capybara'
 end
+
+# Error with timezone on windows fixed with below gem (shouldn't make a difference on nix OSes)
+gem 'tzinfo-data'
