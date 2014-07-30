@@ -6,6 +6,10 @@ class QuestionsController < ApplicationController
     @questions = Question.all.page(params[:page]).per(10)
   end
 
+  def show
+    @answers = @question.answers
+  end
+
   def new
     @question = current_user.questions.new
   end

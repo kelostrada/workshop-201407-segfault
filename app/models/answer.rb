@@ -1,4 +1,5 @@
 class Answer < ActiveRecord::Base
+
   belongs_to :user
   belongs_to :question
 
@@ -9,6 +10,5 @@ class Answer < ActiveRecord::Base
   def author
     user.name
   end
-
 
 end

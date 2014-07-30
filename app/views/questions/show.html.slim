@@ -11,3 +11,16 @@ dl
   dd = @question.body
   dt Author
   dd = @question.author
+
+h2.clearfix
+  | Answers
+  .right
+    = link_to 'Add new Answer', new_question_answer_path(@question), class: 'button'
+
+table
+  tr
+    th
+    th Body
+    th Author
+    th colspan=3
+  = render @answers
