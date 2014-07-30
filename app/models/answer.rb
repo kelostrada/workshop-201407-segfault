@@ -1,7 +1,6 @@
-class Question < ActiveRecord::Base
-
+class Answer < ActiveRecord::Base
   belongs_to :user
-  has_many :answers
+  belongs_to :question
 
   validates :body,
             presence: true,
@@ -10,5 +9,6 @@ class Question < ActiveRecord::Base
   def author
     user.name
   end
+
 
 end
