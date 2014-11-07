@@ -1,0 +1,13 @@
+= form_for [@question, @answer] do |form|
+  - if @answer.errors.any?
+    .alert-box.alert
+      p : strong Please fix #{pluralize(@question.errors.count, 'error')}:
+      ul
+        - @answer.errors.full_messages.each do |message|
+          li = message
+
+  .row
+    .large-12.columns
+      .row.collapse
+        .small-10.columns = form.text_field :body
+        .small-2.columns = form.submit class: 'button postfix'
